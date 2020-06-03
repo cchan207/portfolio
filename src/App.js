@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 // import components
 import Navbar from 'react-bootstrap/Navbar';
-import { Button, Form, Nav, FormControl } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,15 +11,15 @@ import {
 } from "react-router-dom";
 
 // import pages
-import LandingPage from './components/landingpage';
-import About from './components/about';
-import Projects from './components/projects';
+import LandingPage from './components/LandingPage/landingpage';
+import About from './components/About/about';
+import Projects from './components/Projects/projects';
 
-function App() {
+export default function App() {
   return (
    <Router>
       <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="/home">Cora Chan</Navbar.Brand>
+      <Navbar.Brand href="/">Cora Chan</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />        
       <Nav className="mr-auto">
         <Nav.Link>
@@ -42,5 +42,3 @@ function App() {
     </Router>
   )
 }
-
-export default App;
