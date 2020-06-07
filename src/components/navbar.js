@@ -150,13 +150,13 @@ export default function MiniDrawer() {
             <ListItem button key={text}>
               <ListItemIcon>
                 <Link to='/'>
-                    {index === 0 && <HomeOutlinedIcon />}
+                    {index === 0 && <HomeOutlinedIcon style={{fill: "black"}}/>}
                 </Link>
                 <Link to='/design'>
-                    {index === 1 && <LanguageIcon />}
+                    {index === 1 && <LanguageIcon style={{fill: "black"}}/>}
                 </Link>
                 <Link to='/travel'>
-                    {index === 2 && <FlightIcon />}
+                    {index === 2 && <FlightIcon style={{fill: "black"}}/>}
                 </Link>
               </ListItemIcon>
               <ListItemText primary={text} />
@@ -169,12 +169,16 @@ export default function MiniDrawer() {
             <ListItem button key={text}>
               <ListItemIcon>
                 <Link to='/resume'>
-                    {index === 0 && <AttachmentIcon />}
+                    {index === 0 && <AttachmentIcon style={{fill: "black"}}/>}
                 </Link>
-                {index === 1 && <LinkedInIcon />}
-                {index === 2 && <GitHubIcon />}
+                <a href="https://www.linkedin.com/in/cora-chan-251a6315b/" target="_blank">
+                    {index === 1 && <LinkedInIcon style={{fill: "black"}}/>}
+                </a>
+                <a href="https://github.com/cchan207" target="_blank">
+                    {index === 2 && <GitHubIcon style={{fill: "black"}}/>}
+                </a>
                 <Link to='/contact'>
-                    {index === 3 && <MailOutlineIcon />}
+                    {index === 3 && <MailOutlineIcon style={{fill: "black"}}/>}
                 </Link>
               </ListItemIcon>
               <ListItemText primary={text} />
