@@ -33,6 +33,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
   },
   appBar: {
+    position: 'static',
+    width: theme.spacing(9) + 1,
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
@@ -41,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
   },
   appBarShift: {
     marginLeft: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
+    display: 'none',
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -54,18 +56,22 @@ const useStyles = makeStyles((theme) => ({
     display: 'none',
   },
   drawer: {
-    width: drawerWidth,
     flexShrink: 0,
     whiteSpace: 'nowrap',
   },
   drawerOpen: {
     width: drawerWidth,
+    background: '#fff0db',
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
   },
   drawerClose: {
+    position: 'absolute',
+    height: '100%',
+    width: '100%',
+    background: '#fff0db',
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -106,25 +112,12 @@ export default function MiniDrawer() {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar
+      <AppBar style={{ background: '#fff0db' }}
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            className={clsx(classes.menuButton, {
-              [classes.hide]: open,
-            })}
-          >
-            <MenuIcon />
-          </IconButton>
-        </Toolbar>
       </AppBar>
       <Drawer
         variant="permanent"
@@ -140,8 +133,8 @@ export default function MiniDrawer() {
         }}
       >
         <div className={classes.toolbar}>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+          <IconButton onClick={handleDrawerOpen}>
+            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronRightIcon />}
           </IconButton>
         </div>
         <Divider />
@@ -150,13 +143,13 @@ export default function MiniDrawer() {
             <ListItem button key={text}>
               <ListItemIcon>
                 <Link to='/'>
-                    {index === 0 && <HomeOutlinedIcon style={{fill: "black"}}/>}
+                    {index === 0 && <HomeOutlinedIcon style={{fill: "grey"}}/>}
                 </Link>
                 <Link to='/design'>
-                    {index === 1 && <LanguageIcon style={{fill: "black"}}/>}
+                    {index === 1 && <LanguageIcon style={{fill: "grey"}}/>}
                 </Link>
                 <Link to='/travel'>
-                    {index === 2 && <FlightIcon style={{fill: "black"}}/>}
+                    {index === 2 && <FlightIcon style={{fill: "grey"}}/>}
                 </Link>
               </ListItemIcon>
               <ListItemText primary={text} />
@@ -169,16 +162,16 @@ export default function MiniDrawer() {
             <ListItem button key={text}>
               <ListItemIcon>
                 <Link to='/resume'>
-                    {index === 0 && <AttachmentIcon style={{fill: "black"}}/>}
+                    {index === 0 && <AttachmentIcon style={{fill: "grey"}}/>}
                 </Link>
                 <a href="https://www.linkedin.com/in/cora-chan-251a6315b/" target="_blank">
-                    {index === 1 && <LinkedInIcon style={{fill: "black"}}/>}
+                    {index === 1 && <LinkedInIcon style={{fill: "grey"}}/>}
                 </a>
                 <a href="https://github.com/cchan207" target="_blank">
-                    {index === 2 && <GitHubIcon style={{fill: "black"}}/>}
+                    {index === 2 && <GitHubIcon style={{fill: "grey"}}/>}
                 </a>
                 <Link to='/contact'>
-                    {index === 3 && <MailOutlineIcon style={{fill: "black"}}/>}
+                    {index === 3 && <MailOutlineIcon style={{fill: "grey"}}/>}
                 </Link>
               </ListItemIcon>
               <ListItemText primary={text} />
@@ -186,32 +179,6 @@ export default function MiniDrawer() {
           ))}
         </List>
       </Drawer>
-      <main className={classes.content}>
-        <div className={classes.toolbar} />
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-          facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-          gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-          donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-          adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-          Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-          imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
-          arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-          donec massa sapien faucibus et molestie ac.
-        </Typography>
-        <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-          facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-          tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-          consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-          vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-          hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-          tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-          nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-          accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography>
-      </main>
     </div>
   );
 }
