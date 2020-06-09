@@ -1,5 +1,8 @@
 import React from 'react';
 
+// import ccs
+import './navbar.css';
+
 // import components
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
@@ -48,9 +51,6 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
-  },
-  menuButton: {
-    marginRight: 36,
   },
   hide: {
     display: 'none',
@@ -101,18 +101,14 @@ export default function MiniDrawer() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
+  const toggleDrawer = () => {
+      setOpen(!open);
+  }
 
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar style={{ background: '#fff0db' }}
+      <AppBar className="appBar"
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
@@ -133,8 +129,8 @@ export default function MiniDrawer() {
         }}
       >
         <div className={classes.toolbar}>
-          <IconButton onClick={handleDrawerOpen}>
-            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronRightIcon />}
+          <IconButton onClick={toggleDrawer}>
+            {open === false ? <ChevronRightIcon className="iconColor"/> : <ChevronLeftIcon className="iconColor"/>}
           </IconButton>
         </div>
         <Divider />
@@ -143,13 +139,13 @@ export default function MiniDrawer() {
             <ListItem button key={text}>
               <ListItemIcon>
                 <Link to='/'>
-                    {index === 0 && <HomeOutlinedIcon style={{fill: "grey"}}/>}
+                    {index === 0 && <HomeOutlinedIcon className="iconColor"/>}
                 </Link>
                 <Link to='/design'>
-                    {index === 1 && <LanguageIcon style={{fill: "grey"}}/>}
+                    {index === 1 && <LanguageIcon className="iconColor"/>}
                 </Link>
                 <Link to='/travel'>
-                    {index === 2 && <FlightIcon style={{fill: "grey"}}/>}
+                    {index === 2 && <FlightIcon className="iconColor"/>}
                 </Link>
               </ListItemIcon>
               <ListItemText primary={text} />
@@ -162,16 +158,16 @@ export default function MiniDrawer() {
             <ListItem button key={text}>
               <ListItemIcon>
                 <Link to='/resume'>
-                    {index === 0 && <AttachmentIcon style={{fill: "grey"}}/>}
+                    {index === 0 && <AttachmentIcon className="iconColor"/>}
                 </Link>
                 <a href="https://www.linkedin.com/in/cora-chan-251a6315b/" target="_blank">
-                    {index === 1 && <LinkedInIcon style={{fill: "grey"}}/>}
+                    {index === 1 && <LinkedInIcon className="iconColor"/>}
                 </a>
                 <a href="https://github.com/cchan207" target="_blank">
-                    {index === 2 && <GitHubIcon style={{fill: "grey"}}/>}
+                    {index === 2 && <GitHubIcon className="iconColor"/>}
                 </a>
                 <Link to='/contact'>
-                    {index === 3 && <MailOutlineIcon style={{fill: "grey"}}/>}
+                    {index === 3 && <MailOutlineIcon className="iconColor"/>}
                 </Link>
               </ListItemIcon>
               <ListItemText primary={text} />
