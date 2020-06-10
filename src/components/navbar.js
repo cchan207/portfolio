@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerOpen: {
     width: drawerWidth,
-    background: '#fff0db',
+    background: '#edeff0',
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     height: '100%',
     width: '100%',
-    background: '#fff0db',
+    background: '#edeff0',
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,

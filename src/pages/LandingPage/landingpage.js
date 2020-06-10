@@ -9,25 +9,18 @@ import {Container, Row, Col} from 'react-bootstrap';
 
 // import pictures
 import Sunflowers from '../../img/Sunflowers.JPG';
-import Astros from '../../img/Astros.jpeg';
-import AustinBridge from '../../img/AustinBridge.JPG';
-import MontereyBeach from '../../img/MontereyBeach.jpeg';
-import WildAtHeart from '../../img/WildAtHeart.JPG';
+import SunflowersCrop from '../../img/SunflowersCrop.JPG';
 
 export default function Home() {
     return (
         <div>
             <Navbar />
-            <Container className="container">
-                <Row>
-                    <Col lg={5}>About me</Col>
-                    <Col lg={6}><img className="image" src={AustinBridge} alt="PersonalPicTwo"/></Col>
-                </Row>
-                <Row>
-                    <Col>About me</Col>
-                    <Col><img className="image" src={WildAtHeart} alt="PersonalPicThree"/></Col>
-                </Row>
-            </Container>
+            <img className="flowerImg" src={SunflowersCrop} alt="Sunflowers" />
+            <img className="portfolioImg" src={Sunflowers} alt="PortfolioImage" />
+                <div className="aboutMe">
+                    <h2 className="title">Cora Chan</h2>
+                    <p className="description">This is my about me section. It is aligned to the bottom of its containing element.</p>
+                </div>
         </div>
     )
 }
