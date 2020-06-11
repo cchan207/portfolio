@@ -7,6 +7,7 @@ import { useWindowDimensions } from '../../window.js';
 
 // import libraries
 import {Container, Row, Col} from 'react-bootstrap';
+import Box from '@material-ui/core/Box';
 
 // import pictures
 import Sunflowers from '../../img/Sunflowers.JPG';
@@ -34,6 +35,7 @@ export default function Home() {
                         <img className="portfolioImg" src={Sunflowers} alt="PortfolioImage" />
                     </Col>
                     <Col lg={2} className="hiddenColumn">
+                        <header className="boxLg"></header>
                         <img className="flowerImg" src={SunflowersCrop} alt="Sunflowers" />
                     </Col>
                 </Row>
