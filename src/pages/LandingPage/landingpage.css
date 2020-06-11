@@ -1,36 +1,52 @@
+.firstColumn {
+    margin-left: 170px;
+}
+
+.secondColumn {
+    margin-left: 80px;
+}
+
+.hiddenColumn * {
+    display: none;
+}
+
+@media (min-width: 800px) {
+    .hiddenColumn * {
+        display: inline;
+        margin-right: 40px;
+    }
+}
+
 .portfolioImg {
     float: right;
     object-fit: cover;
     width: 450px;
     height: 730px;
-    margin-right: 150px;
 }
-
-.flowerImg {
+    
+.flowerImg{
     float: right;
-    object-fit: cover;
     width: 200px;
-    height: 210px;
-    margin-right: 80px;
-    margin-top: 380px;
-}
-
-.aboutMe {
-    position: relative;
-    left: calc(50% / 4);
-    height: 700px;
-    width: 300px;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    text-align: center;
+    height: 230px;
+    margin-top: 400px;
 }
 
 .title {
     margin-top: 150px;
-    font-size: 60px;
-    font-weight: 100;
+    font-size: 70px;
+    font-weight: 500;
+    letter-spacing: 2.5rem;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.description {
-    position: absolute;
-    bottom: 0;
+.subtitle {
+    font-family: 'Courier New', Courier, monospace;
+    flex-wrap: wrap;
+}
+
+.p {
+    font-family: 'Courier New', Courier, monospace; 
+    flex-wrap: wrap;
+    margin-top: 12rem;
 }
