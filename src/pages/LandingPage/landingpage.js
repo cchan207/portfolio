@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // import files
 import Navbar from '../../components/navbar';
 import './landingpage.css';
+import '../../index.js';
 
 // import libraries
 import {Container, Row, Col} from 'react-bootstrap';
@@ -15,7 +16,9 @@ export default function Home() {
     return (
         <div>
             <Navbar />
-            <img className="flowerImg" src={SunflowersCrop} alt="Sunflowers" />
+            {getWindowDimensions() > 650 && (
+                <img className="flowerImg" src={SunflowersCrop} alt="Sunflowers" />
+            )}
             <img className="portfolioImg" src={Sunflowers} alt="PortfolioImage" />
                 <div className="aboutMe">
                     <h2 className="title">Cora Chan</h2>
