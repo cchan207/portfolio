@@ -1,39 +1,28 @@
+/* For mobile devices */
 .firstColumn {
-    margin-left: 170px;
+    margin-left: 140px;
+    margin-right: 100px;
 }
 
 .secondColumn {
-    margin-left: 80px;
+    display: none;
 }
 
 .hiddenColumn * {
     display: none;
 }
 
-@media (min-width: 1000px) {
-    .hiddenColumn * {
-        display: inline;
-        margin-right: 40px;
-    }
+.flowerImg{
+    height: 230px;
+    width: 200px;
 }
 
 .portfolioImg {
-    object-fit: cover;
-    width: 450px;
-    height: 730px;
-}
-    
-.flowerImg{
-    position: relative;
-    width: 200px;
-    height: 230px;
-    margin-top: 400px;
+    display: none;
 }
 
 .boxLg {
-    position: absolute;
-    margin-top: 140px;
-    height: 250px;
+    height: 230px;
     width: 200px;
     background-color: #c1cfd6;
 }
@@ -42,18 +31,77 @@
     margin-top: 150px;
     font-size: 70px;
     font-weight: 500;
-    letter-spacing: 2.5rem;
+    letter-spacing: 1rem;
     text-align: left;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .subtitle {
+    font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
     flex-wrap: wrap;
 }
 
 .p {
     font-family: 'Courier New', Courier, monospace; 
-    flex-wrap: wrap;
-    margin-top: 12rem;
+    flex-wrap: wrap; 
+    font-size: 20px;
+    align-content: center;
+}
+
+/* For desktop devices */
+@media (min-width: 1000px) {
+    .firstColumn {
+        margin-left: 170px;
+        margin-right: 0px;
+    }
+
+    .secondColumn {
+        display: unset;
+        margin-left: 50px;
+        margin-right: 0px;
+    }
+
+    .flowerImg{
+        position: relative;
+        margin-top: 400px;
+    }
+
+    .portfolioImg {
+        display: unset;
+        object-fit: cover;
+        width: 450px;
+        height: 730px;
+    }
+
+    .boxLg {
+        position: absolute;
+        margin-top: 140px;
+    }
+
+    .title {
+        letter-spacing: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 30px;
+    }
+    
+    .p {
+        font-size: unset;
+    }
+    
+}
+
+@media (min-width: 1500px) {
+    .hiddenColumn * {
+        display: inline;
+        margin-right: 40px;
+    }
+
+    .p {
+        font-family: 'Courier New', Courier, monospace; 
+        flex-wrap: wrap;
+        margin-top: 12rem;
+    }
 }
