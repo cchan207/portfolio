@@ -1,13 +1,4 @@
-.iconColor {
-    color: #404040;
-    size: 2x;
-}
-
-.navBar {
-    background: #edeff0;
-}
-
-/* For mobile navbar */
+/* For desktop */
 .link a {
     text-decoration: none;
     margin-left: 10px;
@@ -16,8 +7,18 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* For mobile */
 @media (min-width: 1000px) {
     .link a {
         font-size: 120%;
     }
+}
+
+/* For old navbar */
+.iconColor {
+    color: #404040;
+}
+
+.navBar {
+    background: #edeff0;
 }
