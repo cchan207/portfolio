@@ -5,16 +5,13 @@ import './navbar.css';
 
 // import components
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
@@ -77,7 +74,6 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     overflowX: 'hidden',
-    width: theme.spacing(6) + 1,
     [theme.breakpoints.up('sm')]: {
       width: theme.spacing(9) + 1,
     },
@@ -98,7 +94,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function MiniDrawer() {
   const classes = useStyles();
-  const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = () => {
@@ -108,7 +103,7 @@ export default function MiniDrawer() {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar className="appBar"
+      <AppBar className="navBar"
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
@@ -160,10 +155,10 @@ export default function MiniDrawer() {
                 <Link to='/resume'>
                     {index === 0 && <AttachmentIcon className="iconColor"/>}
                 </Link>
-                <a href="https://www.linkedin.com/in/cora-chan-251a6315b/" target="_blank">
+                <a href="https://www.linkedin.com/in/cora-chan-251a6315b/" rel="noopener noreferrer" target="_blank">
                     {index === 1 && <LinkedInIcon className="iconColor"/>}
                 </a>
-                <a href="https://github.com/cchan207" target="_blank">
+                <a href="https://github.com/cchan207" rel="noopener noreferrer" target="_blank">
                     {index === 2 && <GitHubIcon className="iconColor"/>}
                 </a>
                 <Link to='/contact'>

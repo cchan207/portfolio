@@ -1,7 +1,20 @@
-.appBar {
-     background: #edeff0;
-}
-
 .iconColor {
     color: #404040;
+}
+
+.navBar {
+    background: #edeff0;
+}
+
+/* For mobile navbar */
+.link {
+    color: #404040;
+    font-size: 180%;
+    margin-left: 10px;
+}
+
+.dropdown {
+    color: #404040;
+    font-size: 20px;
+    margin-left: 10px;
 }

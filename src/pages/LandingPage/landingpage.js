@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // import files
 import Navbar from '../../components/navbar';
+import MobileNav from '../../components/mobilenav'
 import './landingpage.css';
 import { useWindowDimensions } from '../../window.js';
 
 // import libraries
 import {Container, Row, Col} from 'react-bootstrap';
-import Box from '@material-ui/core/Box';
 
 // import pictures
 import Sunflowers from '../../img/Sunflowers.JPG';
@@ -19,7 +19,12 @@ export default function Home() {
     
     return (
         <div>
-            <Navbar />
+            {width >= 1000 && (
+                <Navbar />
+            )}
+            {width < 1000 && (
+                <MobileNav />
+            )}
             <Container fluid>
                     <Row>
                         <Col lg={4} className="firstColumn">
