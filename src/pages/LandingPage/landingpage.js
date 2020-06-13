@@ -2,7 +2,6 @@ import React from 'react';
 
 // import files
 import Navbar from '../../components/navbar';
-import MobileNav from '../../components/mobilenav'
 import './landingpage.css';
 import { useWindowDimensions } from '../../window.js';
 
@@ -12,6 +11,7 @@ import {Container, Row, Col} from 'react-bootstrap';
 // import pictures
 import Sunflowers from '../../img/Sunflowers.JPG';
 import SunflowersCrop from '../../img/SunflowersCrop.JPG';
+import SunflowersBlock from '../../img/SunflowersBlock.png';
 
 export default function Home() {
 
@@ -19,12 +19,7 @@ export default function Home() {
     
     return (
         <div>
-            {width >= 1000 && (
-                <Navbar />
-            )}
-            {width < 1000 && (
-                <MobileNav />
-            )}
+            <Navbar />
             <Container fluid>
                     <Row>
                         <Col lg={4} className="firstColumn">
@@ -36,17 +31,7 @@ export default function Home() {
                             {/* For mobile */}
                             {width < 1000 && (
                                 <div>
-                                    <Row style={{marginRight: '60px'}}>
-                                        <Col>
-                                            <header className="boxLg"></header>
-                                        </Col>
-                                        <Col>
-                                            <img className="flowerImg" src={SunflowersCrop} alt="Sunflowers" />
-                                        </Col>
-                                        <Col>
-                                            <header className="boxLg"></header>
-                                        </Col>
-                                    </Row>
+                                    <img className="landscapeImg" src={SunflowersBlock} alt="LandscapeImage" />
                                 </div>
                             )}
                             <hr />

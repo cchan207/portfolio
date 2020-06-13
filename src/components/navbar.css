@@ -1,5 +1,6 @@
 .iconColor {
     color: #404040;
+    size: 2x;
 }
 
 .navBar {
@@ -7,14 +8,16 @@
 }
 
 /* For mobile navbar */
-.link {
-    color: #404040;
-    font-size: 180%;
+.link a {
+    text-decoration: none;
     margin-left: 10px;
+    font-size: 190%;
+    color: #404040;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.dropdown {
-    color: #404040;
-    font-size: 20px;
-    margin-left: 10px;
+@media (min-width: 1000px) {
+    .link a {
+        font-size: 120%;
+    }
 }

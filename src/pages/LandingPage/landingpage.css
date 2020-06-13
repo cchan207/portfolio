@@ -2,6 +2,7 @@
 .firstColumn {
     margin-left: 140px;
     margin-right: 100px;
+    max-width: 800px;
 }
 
 .secondColumn {
@@ -12,19 +13,10 @@
     display: none;
 }
 
-.flowerImg{
-    height: 230px;
-    width: 200px;
-}
-
-.portfolioImg {
-    display: none;
-}
-
-.boxLg {
-    height: 230px;
-    width: 200px;
-    background-color: #c1cfd6;
+.landscapeImg {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
 }
 
 .title {
@@ -52,12 +44,14 @@
 /* For desktop devices */
 @media (min-width: 1000px) {
     .firstColumn {
-        margin-left: 170px;
+        margin-left: 150px;
         margin-right: 0px;
     }
 
     .secondColumn {
         display: unset;
+        height: 230px;
+        width: 200px;
         margin-left: 50px;
         margin-right: 0px;
     }
@@ -65,21 +59,28 @@
     .flowerImg{
         position: relative;
         margin-top: 400px;
+        height: 230px;
+        width: 200px;
     }
 
     .portfolioImg {
         display: unset;
         object-fit: cover;
+        margin-top: 20px;
         width: 450px;
         height: 730px;
     }
 
     .boxLg {
         position: absolute;
+        height: 230px;
+        width: 200px;
         margin-top: 140px;
+        background-color: #c1cfd6;
     }
 
     .title {
+        margin-top: 150px;
         letter-spacing: 2.5rem;
     }
 
@@ -102,6 +103,6 @@
     .p {
         font-family: 'Courier New', Courier, monospace; 
         flex-wrap: wrap;
-        margin-top: 12rem;
+        margin-top: 0rem;
     }
 }
