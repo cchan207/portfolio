@@ -1,4 +1,4 @@
-/* For desktop */
+/* For mobile */
 .fLink a {
     font-size: 120%;
     color: #404040;
@@ -6,10 +6,9 @@
 }
 
 .footer {
+    position:absolute;
+    left:0;
+    margin-top: 100vh;
+    right:0;
     background: #edeff0;
-}
-
-@media (min-width: 1000px) {
-    .footer {
-    }
 }

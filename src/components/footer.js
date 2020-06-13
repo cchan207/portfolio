@@ -12,13 +12,8 @@ import ListGroup from 'react-bootstrap/ListGroup';
 export default function Footer() {
     return (
         <div>
-            <Navbar fixed="bottom" className="footer">
+            <Navbar className="footer">
             <ListGroup horizontal className="fLink">
-                <ListItem button key={'Home'}>
-                    <Link to="/">
-                        <ListItemText disableTypography>Resume</ListItemText>
-                    </Link>
-                </ListItem>
                 <ListItem button key={'LinkedIn'}>
                     <a href="https://www.linkedin.com/in/cora-chan-251a6315b/" rel="noopener noreferrer" target="_blank">
                         <ListItemText disableTypography>LinkedIn</ListItemText>
@@ -30,7 +25,7 @@ export default function Footer() {
                     </a>
                 </ListItem>
                 <ListItem button key={'Email'}>
-                    <Link to="/">
+                    <Link to="/contact">
                         <ListItemText disableTypography>Email</ListItemText>
                     </Link>
                 </ListItem>

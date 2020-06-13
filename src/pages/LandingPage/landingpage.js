@@ -21,7 +21,7 @@ export default function Home() {
     return (
         <div>
             <Navbar />
-            <Container fluid>
+            <Container fluid className="body">
                     <Row>
                         <Col lg={4} className="firstColumn">
                             <div>
@@ -51,7 +51,6 @@ export default function Home() {
                         </Col>
                     </Row>
             </Container>
-            <Footer />
         </div>
     )
 }
