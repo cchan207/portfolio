@@ -7,6 +7,12 @@ import { useWindowDimensions } from '../../window.js';
 
 // import libraries
 import {Container, Row, Col} from 'react-bootstrap';
+import { Link } from "react-router-dom";
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Button from 'react-bootstrap/Button';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 // import pictures
 import Sunflowers from '../../img/Sunflowers.JPG';
@@ -20,7 +26,7 @@ export default function Home() {
     return (
         <div>
             <Navbar />
-            <Container fluid className="body">
+            <Container fluid>
                     <Row>
                         <Col lg={4} className="firstColumn">
                             <div>
@@ -40,6 +46,22 @@ export default function Home() {
                                 I created this site to learn some front-end development using ReactJS and keep a travel photo journal. My goal is 
                                 to visit all 50 states and at least one country on every continent!
                             </div>
+                            
+                            {/* For desktop */}
+                            {width >= 1000 && (
+                                <ListGroup horizontal className="linkGroup">
+                                <ListItem button key={'Projects'}>
+                                    <Link to="/design">
+                                        <ListItemText disableTypography style={{ textAlign: 'center' }}>Projects</ListItemText>
+                                    </Link>
+                                </ListItem>
+                                <ListItem button key={'Travel'}>
+                                    <Link to="/travel">
+                                        <ListItemText disableTypography className="item">Travel</ListItemText>
+                                    </Link>
+                                </ListItem>
+                                </ListGroup>
+                            )}
                         </Col>
                         <Col lg={4} className="secondColumn">
                             <img className="portfolioImg" src={Sunflowers} alt="PortfolioImage" />
