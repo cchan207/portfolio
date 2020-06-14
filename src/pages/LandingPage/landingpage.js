@@ -2,7 +2,6 @@ import React from 'react';
 
 // import files
 import Navbar from '../../components/navbar';
-import Footer from '../../components/footer';
 import './landingpage.css';
 import { useWindowDimensions } from '../../window.js';
 

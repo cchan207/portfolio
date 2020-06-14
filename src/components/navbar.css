@@ -1,24 +1,47 @@
-/* For desktop */
+/* For mobile */
 .link a {
     text-decoration: none;
     margin-left: 10px;
-    font-size: 190%;
-    color: #404040;
+    font-size: 50px;
+    color: white;
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* For mobile */
-@media (min-width: 1000px) {
-    .link a {
-        font-size: 120%;
-    }
+.iconColor {
+    color: white;
 }
 
-/* For old navbar */
-.iconColor {
-    color: #404040;
+.listItem {
+    margin: 0;
+    padding: 0px 20px;
+    border: 0;
 }
 
 .navBar {
-    background: #edeff0;
+    background: #6B7A8F;
+    min-height: 80px !important;
+}
+
+.expandNav {
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 20px !important;
+}
+
+/* For desktop */
+@media (min-width: 1000px) {
+    .link a {
+        font-size: 160%;
+    }
+
+    .navBar {
+        min-height: unset;
+    }
+    
+    .expandNav {
+        margin-top: unset;
+        margin-bottom: unset;
+        padding: 10px 10px !important;
+    }
 }

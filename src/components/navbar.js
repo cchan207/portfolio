@@ -7,28 +7,58 @@ import List from '@material-ui/core/List';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListGroup from 'react-bootstrap/ListGroup';
-import { useWindowDimensions } from '../window.js';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import EmailIcon from '@material-ui/icons/Email';
+import MenuIcon from '@material-ui/icons/Menu';
 
 import './navbar.css';
+import { useWindowDimensions } from '../window.js'
 
 export default function Menu() {
     let { width } = useWindowDimensions();
+
     return (
         <div>
-            <Navbar expand="false" className="navBar">
-            <Navbar.Toggle />
+            <Navbar expand="false" variant="dark" className="navBar">
+            <Navbar.Toggle className="expandNav">
+                        {width >= 1000 && (
+                            <MenuIcon style={{ fontSize: 30 }} className="iconColor"/>
+                        )}
+                        {width < 1000 && (
+                            <MenuIcon style={{ fontSize: 60 }} className="iconColor"/>
+                        )}
+            </Navbar.Toggle>
             <ListGroup horizontal className="link">
-                <ListItemIcon>
-                    <a href="https://www.linkedin.com/in/cora-chan-251a6315b/" rel="noopener noreferrer" target="_blank"><LinkedInIcon className="iconColor"/></a>
+                <ListItemIcon className="listItem">
+                    <a href="https://www.linkedin.com/in/cora-chan-251a6315b/" rel="noopener noreferrer" target="_blank">
+                        {width >= 1000 && (
+                            <LinkedInIcon style={{ fontSize: 30 }} className="iconColor"/>
+                        )}
+                        {width < 1000 && (
+                            <LinkedInIcon style={{ fontSize: 60 }} className="iconColor"/>
+                        )}
+                    </a>
                 </ListItemIcon>
-                <ListItemIcon>
-                    <a href="https://github.com/cchan207" rel="noopener noreferrer" target="_blank"><GitHubIcon className="iconColor"/></a>
+                <ListItemIcon className="listItem">
+                    <a href="https://github.com/cchan207" rel="noopener noreferrer" target="_blank">
+                        {width >= 1000 && (
+                            <GitHubIcon style={{ fontSize: 30 }} className="iconColor"/>
+                        )}
+                        {width < 1000 && (
+                            <GitHubIcon style={{ fontSize: 60 }} className="iconColor"/>
+                        )}
+                    </a>
                 </ListItemIcon>
-                <ListItemIcon>
-                    <Link to='/contact'><EmailIcon className="iconColor"/></Link>
+                <ListItemIcon className="listItem">
+                    <Link to='/contact'>
+                        {width >= 1000 && (
+                            <EmailIcon style={{ fontSize: 30 }} className="iconColor"/>
+                        )}
+                        {width < 1000 && (
+                            <EmailIcon style={{ fontSize: 60 }} className="iconColor"/>
+                        )}
+                    </Link>
                 </ListItemIcon>
             </ListGroup>
             <Navbar.Collapse>
