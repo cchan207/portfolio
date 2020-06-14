@@ -13,7 +13,7 @@ import EmailIcon from '@material-ui/icons/Email';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import './navbar.css';
-import { useWindowDimensions } from '../window.js'
+import { useWindowDimensions } from '../../window.js'
 
 export default function Menu() {
     let { width } = useWindowDimensions();
