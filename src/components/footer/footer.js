@@ -1,36 +1,59 @@
 import React from 'react';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Link from '@material-ui/core/Link';
 
 import './footer.css';
+import { useWindowDimensions } from '../../window.js';
 
-import { Navbar } from 'react-bootstrap';
-import { Link } from "react-router-dom";
-import ListItem from '@material-ui/core/ListItem';
-import List from '@material-ui/core/List';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListGroup from 'react-bootstrap/ListGroup';
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100%',
+  },
+  footer: {
+    padding: theme.spacing(3, 2),
+    marginTop: 50,
+    textAlign: 'center',
+    fontFamily: "'Courier New', Courier, monospace",
+    color: 'grey',
+  },
+  mfooter: {
+    padding: theme.spacing(3, 2),
+    marginTop: 50,
+    textAlign: 'center',
+    fontFamily: "'Courier New', Courier, monospace",
+    color: 'grey',
+    fontSize: 25,
+  }
+}));
 
-export default function Footer() {
-    return (
-        <div>
-            <Navbar className="footer">
-            <ListGroup horizontal className="fLink">
-                <ListItem button key={'LinkedIn'}>
-                    <a href="https://www.linkedin.com/in/cora-chan-251a6315b/" rel="noopener noreferrer" target="_blank">
-                        <ListItemText disableTypography>LinkedIn</ListItemText>
-                    </a>
-                </ListItem>
-                <ListItem button key={'GitHub'}>
-                    <a href="https://github.com/cchan207" rel="noopener noreferrer" target="_blank">
-                        <ListItemText disableTypography>GitHub</ListItemText>
-                    </a>
-                </ListItem>
-                <ListItem button key={'Email'}>
-                    <Link to="/contact">
-                        <ListItemText disableTypography>Email</ListItemText>
-                    </Link>
-                </ListItem>
-            </ListGroup>
-            </Navbar>
-        </div>
-    );
+export default function StickyFooter() {
+  const classes = useStyles();
+
+  let { width } = useWindowDimensions();
+
+  return (
+    <div className={classes.root}>
+      {width >= 1000 && (
+        <footer className={classes.footer}>
+          <text>Copyright © </text>
+        <Link a href="https://cchan207.github.io/react-app" color='inherit' className="a">
+            Cora Chan
+        </Link>
+        <text> 2020.</text>
+      </footer>
+      )}
+      {width < 1000 && (
+        <footer className={classes.mfooter}>
+          <text>Copyright © </text>
+        <Link a href="https://cchan207.github.io/react-app" color='inherit' className="a">
+            Cora Chan
+        </Link>
+        <text> 2020.</text>
+      </footer>
+      )}
+    </div>
+  );
 }

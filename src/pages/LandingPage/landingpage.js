@@ -2,6 +2,7 @@ import React from 'react';
 
 // import files
 import Navbar from '../../components/navbar/navbar';
+import Footer from '../../components/footer/footer';
 import './landingpage.css';
 import { useWindowDimensions } from '../../window.js';
 
@@ -82,6 +83,7 @@ export default function Home() {
                         </Col>
                     </Row>
             </Container>
+            <Footer />
         </div>
     )
 }
