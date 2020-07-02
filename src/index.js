@@ -13,7 +13,7 @@ import Resume from './pages/Resume/resume';
 import Travel from './pages/Travel/travel';
 
 const routing = (
-  <Router basename="/react-app">
+  <Router>
     <div>
       <Route exact path="/" component={LandingPage} />
       <Route exact path="/design" component={Projects} />

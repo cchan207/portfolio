@@ -4,7 +4,7 @@ import React from 'react' ;
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
 
 // import files
-import ResumePDF from '../../files/Cora_Resume-13Jun2020.pdf';
+import ResumePDF from '../../files/Cora_Resume-1Jul2020.pdf';
 import './resume.css';
 
 // import pages
