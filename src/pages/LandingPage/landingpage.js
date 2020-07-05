@@ -14,9 +14,9 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListGroup from 'react-bootstrap/ListGroup';
 
 // import pictures
-import Sunflowers from '../../img/Sunflowers.JPG';
-import SunflowersCrop from '../../img/SunflowersCrop.JPG';
-import SunflowersBlock from '../../img/SunflowersBlock.png';
+import Sunflowers from '../../img/Homepage/Sunflowers.JPG';
+import SunflowersCrop from '../../img/Homepage/SunflowersCrop.JPG';
+import SunflowersBlock from '../../img/Homepage/SunflowersBlock.png';
 
 export default function Home() {
 

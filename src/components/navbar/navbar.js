@@ -69,14 +69,19 @@ export default function Menu() {
                                 <ListItemText disableTypography>Home</ListItemText>
                             </Link>
                         </ListItem>
-                        <ListItem button key={'Home'}>
+                        <ListItem button key={'Design'}>
                             <Link to="/design">
                                 <ListItemText disableTypography>Design</ListItemText>
                             </Link>
                         </ListItem>
-                        <ListItem button key={'Home'}>
+                        <ListItem button key={'Travel'}>
                             <Link to="/travel">
                                 <ListItemText disableTypography>Travel</ListItemText>
+                            </Link>
+                        </ListItem>
+                        <ListItem button key={'AboutMe'}>
+                            <Link to="/">
+                                <ListItemText disableTypography>About Me</ListItemText>
                             </Link>
                         </ListItem>
                         <ListItem button key={'Resume'}>
