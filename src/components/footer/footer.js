@@ -39,7 +39,7 @@ export default function StickyFooter() {
       {width >= 1000 && (
         <footer className={classes.footer}>
           <text className="github">Copyright ©{' '} 
-            <Link a href="https://cchan207.github.io/react-app" color="inherit">
+            <Link a href="https://github.com/cchan207" color="inherit">
                 Cora Chan{' '}
             </Link>
           2020.</text>
@@ -48,7 +48,7 @@ export default function StickyFooter() {
       {width < 1000 && (
         <footer className={classes.mfooter}>
           <text className="github">Copyright ©{' '} 
-            <Link a href="https://cchan207.github.io/react-app" color="inherit">
+            <Link a href="https://github.com/cchan207" color="inherit">
                 Cora Chan{' '}
             </Link>
           2020.</text>
