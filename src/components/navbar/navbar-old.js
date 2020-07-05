@@ -11,7 +11,6 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import EmailIcon from '@material-ui/icons/Email';
 import MenuIcon from '@material-ui/icons/Menu';
-import Divider from '@material-ui/core/Divider';
 
 import './navbar.css';
 import { useWindowDimensions } from '../../window.js'
@@ -70,20 +69,19 @@ export default function Menu() {
                                 <ListItemText disableTypography>Home</ListItemText>
                             </Link>
                         </ListItem>
-                        <ListItem button key={'Travel'}>
-                            <Link to="/travel">
-                                <ListItemText disableTypography>Travel</ListItemText>
-                            </Link>
-                        </ListItem> 
                         <ListItem button key={'Design'}>
                             <Link to="/design">
                                 <ListItemText disableTypography>Design</ListItemText>
                             </Link>
                         </ListItem>
-                        <Divider style={{ backgroundColor: 'grey' }} />
-                        <ListItem button key={'About'}>
-                            <Link to="/about">
-                                <ListItemText disableTypography>About</ListItemText>
+                        <ListItem button key={'Travel'}>
+                            <Link to="/travel">
+                                <ListItemText disableTypography>Travel</ListItemText>
+                            </Link>
+                        </ListItem>
+                        <ListItem button key={'Resume'}>
+                            <Link to="/resume">
+                                <ListItemText disableTypography>Resume</ListItemText>
                             </Link>
                         </ListItem>
                     </List>

@@ -11,6 +11,7 @@ import Projects from './pages/Projects/projects';
 import Contact from './pages/Contact/contact';
 import Resume from './pages/Resume/resume';
 import Travel from './pages/Travel/travel';
+import About from './pages/About/about';
 
 const routing = (
   <Router>
@@ -20,6 +21,7 @@ const routing = (
       <Route exact path="/travel" component={Travel} />
       <Route exact path="/resume" component={Resume} />
       <Route exact path="/contact" component={Contact} />
+      <Route exact path="/about" component={About} />
     </div>
   </Router>
 )

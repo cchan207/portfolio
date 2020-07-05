@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap');
-
 /* For mobile */
 .link a {
     text-decoration: none;
     margin-left: 10px;
     font-size: 50px;
     color: white;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 200;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .iconColor {

@@ -14,16 +14,16 @@ const useStyles = makeStyles((theme) => ({
   },
   footer: {
     padding: theme.spacing(3, 2),
-    marginTop: 50,
+    marginTop: 30,
     textAlign: 'center',
-    fontFamily: "'Courier New', Courier, monospace",
+    fontFamily: "'Source Sans Pro', sans-serif",
     color: 'grey',
   },
   mfooter: {
     padding: theme.spacing(3, 2),
-    marginTop: 50,
+    marginTop: 30,
     textAlign: 'center',
-    fontFamily: "'Courier New', Courier, monospace",
+    fontFamily: "'Source Sans Pro', sans-serif",
     color: 'grey',
     fontSize: 25,
   }
@@ -38,20 +38,20 @@ export default function StickyFooter() {
     <div className={classes.root}>
       {width >= 1000 && (
         <footer className={classes.footer}>
-          <text>Copyright © </text>
-        <Link a href="https://cchan207.github.io/react-app" color='inherit' className="a">
-            Cora Chan
-        </Link>
-        <text> 2020.</text>
+          <text className="github">Copyright ©{' '} 
+            <Link a href="https://cchan207.github.io/react-app" color="inherit">
+                Cora Chan{' '}
+            </Link>
+          2020.</text>
       </footer>
       )}
       {width < 1000 && (
         <footer className={classes.mfooter}>
-          <text>Copyright © </text>
-        <Link a href="https://cchan207.github.io/react-app" color='inherit' className="a">
-            Cora Chan
-        </Link>
-        <text> 2020.</text>
+          <text className="github">Copyright ©{' '} 
+            <Link a href="https://cchan207.github.io/react-app" color="inherit">
+                Cora Chan{' '}
+            </Link>
+          2020.</text>
       </footer>
       )}
     </div>

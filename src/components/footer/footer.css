@@ -1,5 +1,9 @@
-a:hover {
-    color: #bd8c7d;
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap');
+
+.github a:hover {
+    text-decoration: none;
+    color: #49494b;
+    border-bottom: 1px solid;
 }
 
 .footer {
