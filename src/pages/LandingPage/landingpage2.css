@@ -1,19 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap');
 
-.img1 {
-    width: 100%;
-    height: 100%;
-    padding-top: 30px;
-    padding-right: 50px;
-    padding-left: 60px;
+.container {
+    display: flex;
+    max-width: 1300px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.img2 {
+.img {
+    position: relative;
+    padding-top: 30px;
     width: 100%;
     height: 100%;
-    padding-top: 30px;
-    padding-left: 50px;
-    padding-right: 60px;
 }
 
 .center {
@@ -42,7 +41,7 @@
     position: absolute;
     color: white;
     top: 8%;
-    left: 15%;
+    left: 10%;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     letter-spacing: 5px;
