@@ -22,28 +22,31 @@ export default function Home() {
             <Navbar />
             <div>
                 <Container>
-                    <Row className="center">
+                        <Row className="center">
                         <div>
                             <h1 className="logo"><img src={Logo} alt="Logo" /></h1>
-                            <h3 className="title">CORA CHAN</h3>
+                            {/* For desktop */}
+                            {width > 1000 && (
+                                <h3 className="title">CORA CHAN</h3>
+                            )}
                         </div>
-                    </Row>
-                        <div className="container">
-                            <Row>
-                                <Col sm={12} lg>
-                                    <div>
-                                        <img className="img" src={Alamo} alt="Travel" />
-                                        <h2 className="imgText"><Link to="/travel">TRAVEL</Link></h2>
-                                    </div>
-                                </Col>
-                                <Col sm={12} lg>
-                                    <div>
-                                        <img className="img" src={Chicago} alt="Design" />
-                                        <h2 className="imgText"><Link to="/design">DESIGN</Link></h2>
-                                    </div>
-                                </Col>
-                            </Row>
-                        </div>
+                        </Row>
+                    <div className="container">
+                        <Row>
+                            <Col sm={12} lg>
+                                <div>
+                                    <img className="img" src={Alamo} alt="Travel" />
+                                    <h2 className="imgText"><Link to="/travel">TRAVEL</Link></h2>
+                                </div>
+                            </Col>
+                            <Col sm={12} lg>
+                                <div>
+                                    <img className="img" src={Chicago} alt="Design" />
+                                    <h2 className="imgText"><Link to="/design">DESIGN</Link></h2>
+                                </div>
+                            </Col>
+                        </Row>
+                    </div>
                 </Container>
             </div>
             <Footer />

@@ -4,47 +4,43 @@
 .link a {
     text-decoration: none;
     margin-left: 10px;
-    font-size: 50px;
-    color: white;
+    font-size: 60px;
+    color: #49494b;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 200;
 }
 
-.iconColor {
-    color: white;
-}
-
-.listItem {
-    margin: 0;
-    padding: 0px 20px;
-    border: 0;
-}
-
-.navBar {
-    background: #49494b;
+.navbar {
+    background: white;
     min-height: 80px !important;
 }
 
-.expandNav {
-    color: white;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 20px 20px !important;
+.logoSize {
+    height: 80px;
+    width: auto;
+    padding: 10px;
+}
+
+.toggle {
+    color: #49494b;
+}
+
+.brand {
+    margin-left: 10px;
+    font-size: 78px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    letter-spacing: 5px;
 }
 
 /* For desktop */
 @media (min-width: 1000px) {
     .link a {
-        font-size: 160%;
+        font-size: 130%;
     }
 
-    .navBar {
-        min-height: unset;
-    }
-    
-    .expandNav {
-        margin-top: unset;
-        margin-bottom: unset;
-        padding: 10px 10px !important;
+    .justify-content-end {
+        background: white;
+        min-height: 80px !important;
     }
 }

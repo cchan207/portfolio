@@ -11,7 +11,10 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import EmailIcon from '@material-ui/icons/Email';
 import MenuIcon from '@material-ui/icons/Menu';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+import DragHandleIcon from '@material-ui/icons/DragHandle';
 import Divider from '@material-ui/core/Divider';
+import Logo from '../../img/Homepage/Logo.png';
 
 import './navbar.css';
 import { useWindowDimensions } from '../../window.js'
@@ -21,75 +24,54 @@ export default function Menu() {
 
     return (
         <div>
-            <Navbar expand="false" variant="dark" className="navBar">
-            <Navbar.Toggle className="expandNav">
-                        {width >= 1000 && (
-                            <MenuIcon style={{ fontSize: 30 }} className="iconColor"/>
-                        )}
-                        {width < 1000 && (
-                            <MenuIcon style={{ fontSize: 60 }} className="iconColor"/>
-                        )}
-            </Navbar.Toggle>
-            <ListGroup horizontal className="link">
-                <ListItemIcon className="listItem">
-                    <a href="https://www.linkedin.com/in/cora-chan-251a6315b/" rel="noopener noreferrer" target="_blank">
-                        {width >= 1000 && (
-                            <LinkedInIcon style={{ fontSize: 30 }} className="iconColor"/>
-                        )}
-                        {width < 1000 && (
-                            <LinkedInIcon style={{ fontSize: 60 }} className="iconColor"/>
-                        )}
-                    </a>
-                </ListItemIcon>
-                <ListItemIcon className="listItem">
-                    <a href="https://github.com/cchan207" rel="noopener noreferrer" target="_blank">
-                        {width >= 1000 && (
-                            <GitHubIcon style={{ fontSize: 30 }} className="iconColor"/>
-                        )}
-                        {width < 1000 && (
-                            <GitHubIcon style={{ fontSize: 60 }} className="iconColor"/>
-                        )}
-                    </a>
-                </ListItemIcon>
-                <ListItemIcon className="listItem">
-                    <Link to='/contact'>
-                        {width >= 1000 && (
-                            <EmailIcon style={{ fontSize: 30 }} className="iconColor"/>
-                        )}
-                        {width < 1000 && (
-                            <EmailIcon style={{ fontSize: 60 }} className="iconColor"/>
-                        )}
-                    </Link>
-                </ListItemIcon>
-            </ListGroup>
-            <Navbar.Collapse>
-                <Nav className="link">
-                    <List>
-                        <ListItem button key={'Home'}>
-                            <Link to="/">
-                                <ListItemText disableTypography>Home</ListItemText>
-                            </Link>
-                        </ListItem>
-                        <ListItem button key={'Travel'}>
-                            <Link to="/travel">
-                                <ListItemText disableTypography>Travel</ListItemText>
-                            </Link>
-                        </ListItem> 
-                        <ListItem button key={'Design'}>
-                            <Link to="/design">
-                                <ListItemText disableTypography>Design</ListItemText>
-                            </Link>
-                        </ListItem>
-                        <Divider style={{ backgroundColor: 'grey' }} />
-                        <ListItem button key={'About'}>
-                            <Link to="/about">
-                                <ListItemText disableTypography>About</ListItemText>
-                            </Link>
-                        </ListItem>
-                    </List>
-                </Nav>
-            </Navbar.Collapse>
-            </Navbar>
+            {/* For desktop */}
+            {width > 1000 && (
+                <Navbar expand="false" variant="dark" className="justify-content-end">
+                <ListGroup horizontal className="link">
+                    <ListItem button key={'Home'}>
+                        <Link to="/">
+                            <ListItemText disableTypography>HOME</ListItemText>
+                        </Link>
+                    </ListItem>
+                    <ListItem button key={'About'}>
+                        <Link to="/about">
+                            <ListItemText disableTypography>ABOUT</ListItemText>
+                        </Link>
+                    </ListItem>
+                    <ListItem button key={'Contact'}>
+                        <Link to="/contact">
+                            <ListItemText disableTypography>CONTACT</ListItemText>
+                        </Link>
+                    </ListItem>
+                </ListGroup>
+                </Navbar>
+            )}
+            {/* For mobile */}
+            {width <= 1000 && (
+                <Navbar expand="false" variant="light" className="navbar">
+                <Navbar.Brand href="/" className="brand">CORA CHAN</Navbar.Brand>
+                <Navbar.Toggle>
+                    <MoreVertIcon style={{ fontSize: 60 }} className="toggle"/>
+                </Navbar.Toggle>
+                <Navbar.Collapse>
+                    <Nav className="link">
+                        <List>
+                            <ListItem button key={'About'}>
+                                <Link to="/about">
+                                    <ListItemText disableTypography>ABOUT</ListItemText>
+                                </Link>
+                            </ListItem>
+                            <ListItem button key={'Contact'}>
+                                <Link to="/contact">
+                                    <ListItemText disableTypography>CONTACT</ListItemText>
+                                </Link>
+                            </ListItem>
+                        </List>
+                    </Nav>
+                </Navbar.Collapse>
+                </Navbar>
+            )}
+
         </div>
     );
 }
