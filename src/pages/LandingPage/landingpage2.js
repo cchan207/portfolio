@@ -22,15 +22,15 @@ export default function Home() {
             <Navbar />
             <div>
                 <Container>
-                        <Row className="center">
+                    {/* For desktop */}
+                    {width > 1000 && (
+                    <Row className="center">
                         <div>
                             <h1 className="logo"><img src={Logo} alt="Logo" /></h1>
-                            {/* For desktop */}
-                            {width > 1000 && (
-                                <h3 className="title">CORA CHAN</h3>
-                            )}
+                            <h3 className="title">CORA CHAN</h3>
                         </div>
-                        </Row>
+                    </Row>
+                    )}
                     <div className="container">
                         <Row>
                             <Col sm={12} lg>
