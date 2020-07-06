@@ -1,17 +1,17 @@
 import React from 'react';
 
 // import files
-import Navbar from '../../components/navbar/navbar-home';
-import Footer from '../../components/footer/footer';
+import Navbar from '../components/navbar/navbar-home';
+import Footer from '../components/footer/footer';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import { useWindowDimensions } from '../../window.js';
-import './landingpage2.css';
+import { useWindowDimensions } from '../window.js';
+import '../css-files/app.css';
 
 // import pictures
-import Alamo from '../../img/Texas/Alamo.JPG';
-import Chicago from '../../img/Chicago/Streets.JPG';
-import Logo from '../../img/Homepage/Logo.png';
+import Alamo from '../img/Texas/Alamo.JPG';
+import Chicago from '../img/Chicago/Streets.JPG';
+import Logo from '../img/Homepage/Logo.png';
 
 export default function Home() {
 

@@ -41,8 +41,8 @@ export default function Menu() {
             {/* For mobile */}
             {width <= 1000 && (
                 <Navbar expand="false" variant="light" className="justify-content-end">
-                <Navbar.Toggle>
-                    <DragHandleIcon style={{ fontSize: 80 }} className="toggle"/>
+                <Navbar.Toggle style={{ justifyContent: 'end' }}>
+                    <DragHandleIcon style={{ fontSize: 80 }} className="toggle-icon"/>
                 </Navbar.Toggle>
                 <Navbar.Collapse>
                     <Nav className="link">

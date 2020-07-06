@@ -6,12 +6,12 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 // import files
 import './index.css';
-import LandingPage from './pages/LandingPage/landingpage2';
-import Projects from './pages/Projects/projects';
-import Contact from './pages/Contact/contact';
-import Resume from './pages/Resume/resume';
-import Travel from './pages/Travel/travel';
-import About from './pages/About/about';
+import LandingPage from './pages/landingpage';
+import Projects from './pages/projects';
+import Contact from './pages/contact';
+import Resume from './pages/resume';
+import Travel from './pages/travel';
+import About from './pages/about';
 
 const routing = (
   <Router>

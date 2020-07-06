@@ -4,12 +4,13 @@ import React from 'react' ;
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
 
 // import files
-import ResumePDF from '../../files/Cora_Resume-1Jul2020.pdf';
-import './resume.css';
+import ResumePDF from '../files/Cora_Resume-1Jul2020.pdf';
+
+import '../css-files/app.css';
 
 // import pages
-import Navbar from '../../components/navbar/navbar';
-import Footer from '../../components/footer/footer';
+import Navbar from '../components/navbar/navbar';
+import Footer from '../components/footer/footer';
 
 export default function Resume() {
 
@@ -17,7 +18,7 @@ export default function Resume() {
         <div>
             <Navbar />
             <div>
-                <Document file={ResumePDF} className="container">
+                <Document file={ResumePDF} className="resume-container">
                     <Page pageNumber={1} width={1000}/>
                 </Document>
             </div>

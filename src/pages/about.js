@@ -1,23 +1,23 @@
 import React from 'react';
 
 // import pages
-import Navbar from '../../components/navbar/navbar';
-import Footer from '../../components/footer/footer';
+import Navbar from '../components/navbar/navbar';
+import Footer from '../components/footer/footer';
 
 // import libraries
 import {Container, Row, Col} from 'react-bootstrap';
 import { Link } from "react-router-dom";
 
 // import pictures
-import Headshot from '../../img/Homepage/Headshot.JPG';
+import Headshot from '../img/Homepage/Headshot.JPG';
 
-import './about.css';
+import '../css-files/app.css';
 
 export default function Contact() {
     return (
         <div>
             <Navbar />
-            <h1 className="about-title">ABOUT ME</h1>
+            <h1 className="page-title">ABOUT ME</h1>
             <div className="about-container">
             <Container>
                 <Row className="about-img">

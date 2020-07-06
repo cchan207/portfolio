@@ -43,7 +43,7 @@ export default function Menu() {
                 <Navbar expand="false" variant="light" className="navbar">
                 <Navbar.Brand href="/" className="brand">CORA CHAN</Navbar.Brand>
                 <Navbar.Toggle>
-                    <DragHandleIcon style={{ fontSize: 80 }} className="toggle"/>
+                    <DragHandleIcon style={{ fontSize: 80 }} className="toggle-icon"/>
                 </Navbar.Toggle>
                 <Navbar.Collapse>
                     <Nav className="link">
