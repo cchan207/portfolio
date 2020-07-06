@@ -10,7 +10,7 @@ import '../css-files/app.css';
 
 // import pictures
 import Alamo from '../img/Texas/Alamo.JPG';
-import Chicago from '../img/Chicago/Streets.JPG';
+import Chicago from '../img/Illinois/Streets.JPG';
 import Logo from '../img/Homepage/Logo.png';
 
 export default function Home() {
