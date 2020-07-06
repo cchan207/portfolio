@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import files
-import Navbar from '../../components/navbar/navbar';
+import Navbar from '../../components/navbar/navbar-home';
 import Footer from '../../components/footer/footer';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from "react-router-dom";

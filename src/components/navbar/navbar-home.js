@@ -40,7 +40,8 @@ export default function Menu() {
             )}
             {/* For mobile */}
             {width <= 1000 && (
-                <Navbar expand="false" variant="light" className="justify-content-end">
+                <Navbar expand="false" variant="light" className="navbar">
+                <Navbar.Brand href="/" className="brand">CORA CHAN</Navbar.Brand>
                 <Navbar.Toggle>
                     <DragHandleIcon style={{ fontSize: 80 }} className="toggle"/>
                 </Navbar.Toggle>
@@ -67,6 +68,7 @@ export default function Menu() {
                 </Navbar.Collapse>
                 </Navbar>
             )}
+
         </div>
     );
 }
