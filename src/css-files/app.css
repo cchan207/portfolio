@@ -1,6 +1,7 @@
 /* COMMON */
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
 
 .page-title {
     font-family: 'Playfair Display', serif;
@@ -40,6 +41,8 @@
 }
 
 .logo {
+    font-size: 100px;
+    font-family: 'Tangerine', cursive;
     display: block;
     text-align: center;
     margin: 0 auto;
@@ -93,14 +96,15 @@
 .about-container {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
-    color:#49494b;
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 70px;
 }
 
 .about-img {
     display: flex;
     justify-content: center;
+    margin-bottom: 80px;
 }
 
 .about-text {
@@ -110,18 +114,32 @@
     margin-right: 30px;
 }
 
+.about-text h2 {
+    font-size: 30px;
+}
+
 .about-text p {
     padding-bottom: 30px;
     font-weight: 400;
+    font-size: 18px;
 }
 
 .headshot {
     overflow: hidden;
-    padding-top: 30px;
-    padding-bottom: 70px;
-    max-height: 800px;
+    max-height: 520px;
     width: auto;
     margin-right: 50px;
+}
+
+/* For mobile */
+@media (max-width: 1000px) {
+    .headshot {
+        overflow: hidden;
+        max-height: unset;
+        height: 100%;
+        width: 100%;
+        margin-right: unset;
+    }
 }
 
 /* TRAVEL */

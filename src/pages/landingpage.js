@@ -26,7 +26,7 @@ export default function Home() {
                     {width > 1000 && (
                     <Row className="center">
                         <div>
-                            <h1 className="logo"><img src={Logo} alt="Logo" /></h1>
+                            {/*<h1 className="logo"><img src={Logo} alt="Logo" /></h1>*/}
                             <h3 className="title">CORA CHAN</h3>
                         </div>
                     </Row>
@@ -35,14 +35,18 @@ export default function Home() {
                         <Row>
                             <Col sm={12} lg>
                                 <div>
+                                <Link to="/travel">
                                     <img className="img" src={Alamo} alt="Travel" />
                                     <h2 className="imgText"><Link to="/travel">TRAVEL</Link></h2>
+                                </Link>
                                 </div>
                             </Col>
                             <Col sm={12} lg>
                                 <div>
+                                <Link to="/design">
                                     <img className="img" src={Chicago} alt="Design" />
                                     <h2 className="imgText"><Link to="/design">DESIGN</Link></h2>
+                                </Link>
                                 </div>
                             </Col>
                         </Row>
