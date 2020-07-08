@@ -1,12 +1,29 @@
 /* COMMON */
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
 
 .page-title {
     font-family: 'Playfair Display', serif;
     text-align: center;
     font-size: 60px;
+}
+
+.arrows a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    color: #49494b;
+}
+
+.arrows a:hover {
+    text-decoration: none;
+}
+
+.left-nav-icon {
+    margin-right: 500px;
+}
+
+.nav-icon {
+    color: #49494b;
 }
 
 /* For mobile */
@@ -15,6 +32,10 @@
         letter-spacing: 5px;
         margin-top: 30px;
         font-size: 100px;
+    }
+
+    .left-nav-icon {
+        margin-right: 400px;
     }
 }
 
@@ -42,7 +63,6 @@
 
 .logo {
     font-size: 100px;
-    font-family: 'Tangerine', cursive;
     display: block;
     text-align: center;
     margin: 0 auto;
@@ -98,13 +118,12 @@
     font-weight: 400;
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 70px;
+    margin-top: 80px;
 }
 
 .about-img {
     display: flex;
     justify-content: center;
-    margin-bottom: 80px;
 }
 
 .about-text {
@@ -115,13 +134,14 @@
 }
 
 .about-text h2 {
+    margin-top: 8%;
     font-size: 30px;
 }
 
 .about-text p {
-    padding-bottom: 30px;
+    margin-bottom: 50px;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .headshot {
@@ -139,6 +159,14 @@
         height: 100%;
         width: 100%;
         margin-right: unset;
+    }
+
+    .about-img {
+        margin-bottom: 80px;
+    }
+
+    .about-text p {
+        padding-bottom: 30px;
     }
 }
 
@@ -177,4 +205,5 @@
     justify-content: center;
     align-items: center;
 }
+
 

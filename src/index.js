@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 
 // import files
 import './index.css';
@@ -10,11 +10,13 @@ import LandingPage from './pages/landingpage';
 import Projects from './pages/projects';
 import Contact from './pages/contact';
 import Resume from './pages/resume';
-import Travel from './pages/travel';
+import Travel from './pages/outdoors';
+import City from './pages/city';
 import About from './pages/about';
+import Food from './pages/food';
 
 const routing = (
-  <Router>
+  <HashRouter basename="/">
     <div>
       <Route exact path="/" component={LandingPage} />
       <Route exact path="/design" component={Projects} />
@@ -22,8 +24,10 @@ const routing = (
       <Route exact path="/resume" component={Resume} />
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/about" component={About} />
+      <Route exact path="/food" component={Food} />
+      <Route exact path="/city" component={City} />
     </div>
-  </Router>
+  </HashRouter>
 )
 
 

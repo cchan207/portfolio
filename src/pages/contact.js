@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // import pages
 import Navbar from '../components/navbar/navbar';
@@ -8,6 +8,10 @@ import Template from '../files/index.js';
 import '../css-files/app.css';
 
 export default function Contact() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div>
             <Navbar />

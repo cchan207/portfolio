@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // import files
 import Navbar from '../components/navbar/navbar-home';
@@ -14,6 +14,9 @@ import Chicago from '../img/Illinois/Streets.JPG';
 import Logo from '../img/Homepage/Logo.png';
 
 export default function Home() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     let {width} = useWindowDimensions();
 

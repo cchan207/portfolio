@@ -1,4 +1,4 @@
-import React from 'react' ;
+import React, { useEffect } from 'react';
 
 // import components
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
@@ -13,6 +13,9 @@ import Navbar from '../components/navbar/navbar';
 import Footer from '../components/footer/footer';
 
 export default function Resume() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
         <div>
