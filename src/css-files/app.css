@@ -37,6 +37,10 @@
     .left-nav-icon {
         margin-right: 400px;
     }
+
+    .arrows a {
+        font-size: 35px;
+    }
 }
 
 /* HOME */
