@@ -12,12 +12,12 @@ import { Link } from "react-router-dom";
 
 // import pictures
 import Uchi from '../img/Texas/Uchi.JPG';
-import Uchi2 from '../img/Texas/Uchi2.JPG';
 import RH from '../img/NewYork/RH.JPG';
 import MontereyDining from '../img/California/MontereyDining.JPG';
 import Bakery from '../img/NewYork/Bakery.JPG';
 import Bluebeard from '../img/Indiana/Bluebeard.JPG';
 import GardenTable from '../img/Indiana/GardenTable.JPG';
+
 
 import '../css-files/app.css';
 
@@ -25,6 +25,17 @@ export default function Food() {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, []);
+
+    let names = [
+        'Texas/Uchi.JPG',
+        'NewYork/RH.JPG',
+        'Indiana/GardenTable.JPG',
+        'NewYork/Bakery.JPG',
+        'California/MontereyDining.JPG',
+        'Indiana/Bluebeard.JPG',
+    ].map( (name, index) => { 
+        return <img className="travel-img" alt="" src={require(`../img/${name}`)} />
+    } );
 
     return (
         <div>
@@ -34,12 +45,11 @@ export default function Food() {
                 <Container>
                     <div className="travel-container">
                         <Row>
-                            <Col sm={12} lg={12}><img className="travel-img" src={Uchi} alt="" /></Col>
-                            <Col sm={12} lg={12}><img className="travel-img" src={RH} alt="" /></Col>
-                            <Col sm={12} lg={12}><img className="travel-img" src={GardenTable} alt="" /></Col>
-                            <Col sm={12} lg={12}><img className="travel-img" src={Bakery} alt="" /></Col>
-                            <Col sm={12} lg={12}><img className="travel-img" src={MontereyDining} alt="" /></Col>
-                            <Col sm={12} lg={12}><img className="travel-img" src={Bluebeard} alt="" /></Col>
+                            <div>
+                                <Col sm={12} lg={12}>
+                                    { names }
+                                </Col>
+                            </div>
                         </Row>
                         <Row className="arrows">
                             <div className="left-nav-icon">
