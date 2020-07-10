@@ -10,6 +10,7 @@ import LandingPage from './pages/landingpage';
 import Projects from './pages/projects';
 import Resume from './pages/resume';
 import Travel from './pages/outdoors';
+import Email from './pages/email';
 import City from './pages/city';
 import About from './pages/about';
 import Food from './pages/food';
@@ -23,6 +24,7 @@ const routing = (
       <Route exact path="/resume" component={Resume} />
       <Route exact path="/about" component={About} />
       <Route exact path="/food" component={Food} />
+      <Route exact path="/contact" component={Email} />
       <Route exact path="/city" component={City} />
     </div>
   </HashRouter>

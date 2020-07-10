@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 // import pages
 import Navbar from '../components/navbar/navbar';
 import Footer from '../components/footer/footer';
+import { useWindowDimensions } from '../window.js';
 
 // import libraries
 import {Container, Row, Col} from 'react-bootstrap';
@@ -23,6 +24,8 @@ export default function About() {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+
+    let { width } = useWindowDimensions();
 
     return (
         <div>
@@ -72,17 +75,32 @@ export default function About() {
                                 <ListGroup horizontal>
                                     <ListGroupItem className="justify-content-between" className="icons-group">
                                         <a href="https://www.linkedin.com/in/cora-chan-251a6315b/" rel="noopener noreferrer" target="_blank">
-                                            <LinkedInIcon style={{ fontSize: 30 }} className="icon"/>
+                                            { width > 1000 && (
+                                                <LinkedInIcon style={{ fontSize: 30 }} className="icon"/>
+                                            )}
+                                            { width <= 1000 && (
+                                                <LinkedInIcon style={{ fontSize: 60 }} className="icon"/>
+                                            )}
                                         </a>
                                     </ListGroupItem>
                                     <ListGroupItem className="justify-content-between" className="icons-group">
                                         <a href="https://github.com/cchan207" rel="noopener noreferrer" target="_blank">
-                                            <GitHubIcon style={{ fontSize: 30 }} className="icon"/>
+                                            { width > 1000 && (
+                                                <GitHubIcon style={{ fontSize: 30 }} className="icon"/>
+                                            )}
+                                            { width <= 1000 && (
+                                                <GitHubIcon style={{ fontSize: 60 }} className="icon"/>
+                                            )}
                                         </a>
                                     </ListGroupItem>
                                     <ListGroupItem className="justify-content-between" className="icons-group">
                                         <Link to='/contact'>
-                                            <EmailIcon style={{ fontSize: 30 }} className="icon"/>
+                                            { width > 1000 && (
+                                                <EmailIcon style={{ fontSize: 30 }} className="icon"/>
+                                            )}
+                                            { width <= 1000 && (
+                                                <EmailIcon style={{ fontSize: 60 }} className="icon"/>       
+                                            )}                     
                                         </Link>
                                     </ListGroupItem>
                                 </ListGroup>

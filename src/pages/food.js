@@ -10,15 +10,6 @@ import Footer from '../components/footer/footer';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 
-// import pictures
-import Uchi from '../img/Texas/Uchi.JPG';
-import RH from '../img/NewYork/RH.JPG';
-import MontereyDining from '../img/California/MontereyDining.JPG';
-import Bakery from '../img/NewYork/Bakery.JPG';
-import Bluebeard from '../img/Indiana/Bluebeard.JPG';
-import GardenTable from '../img/Indiana/GardenTable.JPG';
-
-
 import '../css-files/app.css';
 
 export default function Food() {
