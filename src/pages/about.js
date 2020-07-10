@@ -94,14 +94,14 @@ export default function About() {
                                         </a>
                                     </ListGroupItem>
                                     <ListGroupItem className="justify-content-between" className="icons-group">
-                                        <Link to='/contact'>
+                                        <a href="mailto:chan207@purdue.edu">
                                             { width > 1000 && (
                                                 <EmailIcon style={{ fontSize: 30 }} className="icon"/>
                                             )}
                                             { width <= 1000 && (
                                                 <EmailIcon style={{ fontSize: 60 }} className="icon"/>       
                                             )}                     
-                                        </Link>
+                                        </a>
                                     </ListGroupItem>
                                 </ListGroup>
                             </div>
