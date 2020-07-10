@@ -6,6 +6,12 @@ import Footer from '../components/footer/footer';
 
 // import libraries
 import {Container, Row, Col} from 'react-bootstrap';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListGroup from 'react-bootstrap/ListGroup';
+import ListGroupItem from 'react-bootstrap/ListGroupItem';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import EmailIcon from '@material-ui/icons/Email';
 import { Link } from "react-router-dom";
 
 // import pictures
@@ -13,7 +19,7 @@ import Headshot from '../img/Homepage/Headshot.JPG';
 
 import '../css-files/app.css';
 
-export default function Contact() {
+export default function About() {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
@@ -23,34 +29,69 @@ export default function Contact() {
             <Navbar />
             <h1 className="page-title">ABOUT ME</h1>
             <div className="about-container">
-            <Container>
-                <Row className="about-img">
-                    <img className="headshot" src={Headshot} alt="Headshot" />
-                </Row>
-                <Row className="about-text">
-                    <div>
-                        <h2>INTRODUCTION</h2>
-                        <p>
-                            Hi, welcome to my website! I created this site to experiment with front-end development using ReactJS and share my favorite pictures from 
-                            the trips I've been on. I love to travel and explore new places, especially in my home state of California. I'm also an avid Yelper and usually 
-                            the go-to person for restaurant suggestions. If you're traveling to any of the places I've been to or have any suggestions, feel 
-                            free to connect with me on any of the social media listed on my contact page!
-                        </p>
+                <Container>
+                    <Row className="about-img">
+                        <img className="headshot" src={Headshot} alt="Headshot" />
+                    </Row>
+                    <Row className="about-text">
+                        <div>
+                            <h2>INTRODUCTION</h2>
+                            <p>
+                                Hi, welcome to my website! I created this site to experiment with front-end development using ReactJS and share some of my favorite pictures from 
+                                the trips I've been on. As of now, most of these pictures were taken on recent trips to Iceland; New York City, New York; Austin, Texas; 
+                                Sodona, Arizona; Chicago, Illinois; and different cities in my homestate of California. I've also been to Costa Rica, Japan, Newfoundland, China, and 
+                                20 states in the US. It's my goal to visit all 50 someday! Check out the contact section below to view my photo archive for more pictures or 
+                                feel free to connect with me on any of the social media listed.
+                            </p>
 
-                        <h2>MY EXPERIENCE</h2>
-                        <p>
-                            I am an incoming senior at Purdue University where I'm studying Computer Science with a Software Engineering concentration and 
-                            Business Economics minor. I have two years of technical work experience designing and implementing projects, executing deployments, 
-                            and developing my communication and presentation skills. I strongly believe that balance is key to a successful career - a tenet that 
-                            I live out by leaving my desk! I enjoy traveling, hiking, and eating at different restaurants. I'm currently interning with Amazon Web 
-                            Services as a Software Development Engineer and am looking for full time positions starting late Summer 2021 
-                            with an emphasis on collaboration and leadership. You can view my resume{' '}
-                            <Link to="/resume">here</Link>.
-                        </p>
-                    </div>
-                </Row>
-            </Container>
+                            <h2>MY EXPERIENCE</h2>
+                            <p>
+                                I am an incoming senior at Purdue University where I'm studying Computer Science with a Software Engineering concentration and 
+                                Business Economics minor. I have two years of technical work experience designing and implementing projects, executing deployments, 
+                                and developing my communication and presentation skills. I strongly believe that balance is key to a successful career - a tenet that 
+                                I live out by leaving my desk! I enjoy traveling, hiking, and eating at different restaurants. I'm currently interning with Amazon Web 
+                                Services as a Software Development Engineer and am looking for full time positions starting late Summer 2021 
+                                with an emphasis on collaboration and leadership. You can view my resume{' '}
+                                <Link to="/resume">here</Link>.
+                            </p>
+                        </div>
+                    </Row>
+                </Container>
             </div>
+            <div className="contact-container">
+                <Container>
+                    <Row>
+                        <div>
+                            <h1 className="contact-title">CONTACT</h1>
+                            <h4>EMAIL</h4>
+                            <p>chan207@purdue.edu</p>
+                            <h4>PHOTO ARCHIVE</h4>
+                            <p>Coming soon!</p>
+
+                            <div className="icons-container">
+                                <ListGroup horizontal>
+                                    <ListGroupItem className="justify-content-between" className="icons-group">
+                                        <a href="https://www.linkedin.com/in/cora-chan-251a6315b/" rel="noopener noreferrer" target="_blank">
+                                            <LinkedInIcon style={{ fontSize: 30 }} className="icon"/>
+                                        </a>
+                                    </ListGroupItem>
+                                    <ListGroupItem className="justify-content-between" className="icons-group">
+                                        <a href="https://github.com/cchan207" rel="noopener noreferrer" target="_blank">
+                                            <GitHubIcon style={{ fontSize: 30 }} className="icon"/>
+                                        </a>
+                                    </ListGroupItem>
+                                    <ListGroupItem className="justify-content-between" className="icons-group">
+                                        <Link to='/contact'>
+                                            <EmailIcon style={{ fontSize: 30 }} className="icon"/>
+                                        </Link>
+                                    </ListGroupItem>
+                                </ListGroup>
+                            </div>
+                        </div>
+                    </Row>
+                </Container>
+            </div>
+
             <Footer />
         </div>
     )

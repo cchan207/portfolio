@@ -30,9 +30,9 @@ export default function Menu() {
                             <ListItemText disableTypography>ABOUT</ListItemText>
                         </Link>
                     </ListItem>
-                    <ListItem button key={'Contact'}>
-                        <Link to="/contact">
-                            <ListItemText disableTypography>CONTACT</ListItemText>
+                    <ListItem button key={'Resume'}>
+                        <Link to="/resume">
+                            <ListItemText disableTypography>RESUME</ListItemText>
                         </Link>
                     </ListItem>
                 </ListGroup>
@@ -58,9 +58,9 @@ export default function Menu() {
                                     <ListItemText disableTypography>ABOUT</ListItemText>
                                 </Link>
                             </ListItem>
-                            <ListItem button key={'Contact'}>
-                                <Link to="/contact">
-                                    <ListItemText disableTypography>CONTACT</ListItemText>
+                            <ListItem button key={'Resume'}>
+                                <Link to="/resume">
+                                    <ListItemText disableTypography>RESUME</ListItemText>
                                 </Link>
                             </ListItem>
                         </List>

@@ -130,7 +130,7 @@
     font-weight: 400;
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .about-img {
@@ -146,7 +146,7 @@
 }
 
 .about-text h2 {
-    margin-top: 8%;
+    margin-top: 5%;
     font-size: 30px;
 }
 
@@ -180,6 +180,46 @@
     .about-text p {
         padding-bottom: 30px;
     }
+}
+
+/* CONTACT */
+.contact-container {
+    margin-top: 50px;
+    background-color: #D3D3D3;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    min-height: 60vh;
+}
+
+.contact-title {
+    margin-top: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+}
+
+.contact-container h4 {
+    margin-top: 11vh;
+    font-size: 30px;
+}
+
+.contact-container p {
+    font-size: 15px;
+}
+
+.icons-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 11vh;
+}
+
+.icons-group {
+    background: #D3D3D3;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.icon {
+    color: black;
 }
 
 /* TRAVEL */

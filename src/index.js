@@ -8,7 +8,6 @@ import { HashRouter, Route } from "react-router-dom";
 import './index.css';
 import LandingPage from './pages/landingpage';
 import Projects from './pages/projects';
-import Contact from './pages/contact';
 import Resume from './pages/resume';
 import Travel from './pages/outdoors';
 import City from './pages/city';
@@ -22,7 +21,6 @@ const routing = (
       <Route exact path="/design" component={Projects} />
       <Route exact path="/travel" component={Travel} />
       <Route exact path="/resume" component={Resume} />
-      <Route exact path="/contact" component={Contact} />
       <Route exact path="/about" component={About} />
       <Route exact path="/food" component={Food} />
       <Route exact path="/city" component={City} />
