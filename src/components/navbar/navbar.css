@@ -12,6 +12,10 @@
     font-weight: 200;
 }
 
+.link-text {
+    display: block;
+}
+
 .navbar {
     padding-top: 40px;
     margin-right: 30px;

@@ -43,11 +43,11 @@ export default function About() {
                                 Hi, welcome to my website! I created this site to experiment with front-end development using ReactJS and share some of my favorite pictures from 
                                 the trips I've been on. As of now, most of these pictures were taken on recent trips to Iceland; New York City, New York; Austin, Texas; 
                                 Sodona, Arizona; Chicago, Illinois; and different cities in my homestate of California. I've also been to Costa Rica, Japan, Newfoundland, China, and 
-                                20 states in the US. It's my goal to visit all 50 someday! Check out the contact section below to view my photo archive for more pictures or 
-                                feel free to connect with me on any of the social media listed.
+                                20 states in the US. It's my goal to visit all 50 someday! Check out the contact section below to view my photo archive for more pictures 
+                                (coming soon) or feel free to connect with me on any of the social media listed.
                             </p>
 
-                            <h2>MY EXPERIENCE</h2>
+                            <h2>EXPERIENCE</h2>
                             <p>
                                 I am an incoming senior at Purdue University where I'm studying Computer Science with a Software Engineering concentration and 
                                 Business Economics minor. I have two years of technical work experience designing and implementing projects, executing deployments, 

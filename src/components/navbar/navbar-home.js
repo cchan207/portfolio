@@ -20,21 +20,21 @@ export default function Menu() {
             {width > 1000 && (
                 <Navbar expand="false" variant="dark" className="justify-content-end">
                 <ListGroup horizontal className="link">
-                    <ListItem button key={'Home'}>
-                        <Link to="/">
-                            <ListItemText disableTypography>HOME</ListItemText>
-                        </Link>
-                    </ListItem>
-                    <ListItem button key={'About'}>
-                        <Link to="/about">
-                            <ListItemText disableTypography>ABOUT</ListItemText>
-                        </Link>
-                    </ListItem>
-                    <ListItem button key={'Resume'}>
-                        <Link to="/resume">
-                            <ListItemText disableTypography>RESUME</ListItemText>
-                        </Link>
-                    </ListItem>
+                    <Link to="/">
+                        <ListItem button key={'Home'}>
+                                <ListItemText disableTypography>HOME</ListItemText>
+                        </ListItem>
+                    </Link>
+                    <Link to="/about">
+                        <ListItem button key={'About'}>
+                                <ListItemText disableTypography>ABOUT</ListItemText>
+                        </ListItem>
+                    </Link>
+                    <Link to="/resume">
+                        <ListItem button key={'Resume'}>
+                                <ListItemText disableTypography>RESUME</ListItemText>
+                        </ListItem>
+                    </Link>
                 </ListGroup>
                 </Navbar>
             )}
