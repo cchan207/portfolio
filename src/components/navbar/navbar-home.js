@@ -50,17 +50,17 @@ export default function Menu() {
                         <List>
                             <Link to="/">
                                 <ListItem button key={'Home'}>
-                                        <ListItemText disableTypography>HOME</ListItemText>
+                                        <ListItemText disableTypography className="link-text">HOME</ListItemText>
                                 </ListItem>
                             </Link>
                             <Link to="/about">
                                 <ListItem button key={'About'}>
-                                        <ListItemText disableTypography>ABOUT</ListItemText>
+                                        <ListItemText disableTypography className="link-text">ABOUT</ListItemText>
                                 </ListItem>
                             </Link>
                             <Link to="/resume">
                                 <ListItem button key={'Resume'}>
-                                        <ListItemText disableTypography>RESUME</ListItemText>
+                                        <ListItemText disableTypography className="link-text">RESUME</ListItemText>
                                 </ListItem>
                             </Link>
                         </List>
