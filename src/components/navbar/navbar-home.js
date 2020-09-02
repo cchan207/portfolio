@@ -9,7 +9,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import DragHandleIcon from '@material-ui/icons/DragHandle';
 
 import './navbar.css';
-import { useWindowDimensions } from '../../window.js'
+import { useWindowDimensions } from '../../window.js';
 
 export default function Menu() {
     let { width } = useWindowDimensions();
