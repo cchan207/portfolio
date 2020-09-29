@@ -24,7 +24,7 @@ export default function City() {
         {image : 'NewYork/HighLine.JPG', label : 'Highline', location : 'New York City, New York'},
         {image : 'Texas/KemahBW.JPG', label : 'Kemah Boardwalk', location : 'Houston, Texas'},
         {image : 'Missouri/CityMuseum.JPG', label : 'City Museum', location : 'St. Louis, Missouri'},
-        {image : 'California/SFMural.JPG', label : 'Mural', location : 'San Francisco, California'},
+        {image : 'California/SFMural.JPG', label : 'Unknown', location : 'San Francisco, California'},
         {image : 'California/Balboa.JPG', label : 'Balboa Park', location : 'San Diego, California'}
     ];
 
