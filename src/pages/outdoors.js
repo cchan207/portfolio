@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 // import icons
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 
 // import pages
 import Navbar from '../components/navbar/navbar';
@@ -32,7 +33,10 @@ export default function Outdoors() {
         return (
             <div>
                 <img className="travel-img" alt="" src={require(`../img/${item.image}`)}></img>
-                <text>{item.caption}</text>
+                <div className="travel-caption">
+                    <ArrowDropUpIcon style={{ fontSize: 40 }}/>
+                    <text>{item.caption}</text>
+                </div>
             </div>
         );
     }
