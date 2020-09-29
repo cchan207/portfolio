@@ -20,13 +20,13 @@ export default function Outdoors() {
     }, [])
 
     var images = [
-        {image : 'Iceland/BlueLagoon.JPG', caption : 'Blue Lagoon, Iceland'},
-        {image : 'California/Boats.JPG', caption : 'San Diego, California'},
-        {image : 'California/DeathValley.JPG', caption : 'Death Valley, California'},
-        {image : 'Arizona/RedRock.JPG', caption : 'Sedona, Arizona'},
-        {image : 'Iceland/Bridge.jpg', caption : 'Hraunfossar, Iceland'},
-        {image : 'California/PalmSprings2.JPG', caption : 'Palm Springs, California'},
-        {image : 'California/MontereyHotTub.JPG', caption : 'Monterey, California'}
+        {image : 'Iceland/BlueLagoon.JPG', label : 'Blue Lagoon', location : 'Grindavík, Iceland'},
+        {image : 'California/Boats.JPG', label : 'Unknown', location : 'San Diego, California'},
+        {image : 'California/DeathValley.JPG', label : 'Mesquite Flat Sand Dunes', location : 'Death Valley, California'},
+        {image : 'Arizona/RedRock.JPG', label : 'Red Rock', location : 'Sedona, Arizona'},
+        {image : 'Iceland/Bridge.jpg', label : 'Hraunfossar', location : 'Borgarfjörður, Iceland'},
+        {image : 'California/PalmSprings2.JPG', label : 'Aerial Tramway', location : 'Palm Springs, California'},
+        {image : 'California/MontereyHotTub.JPG', label : 'Unknown', location : 'Monterey, California'}
     ];
 
     function getPicture(item) {
@@ -35,7 +35,8 @@ export default function Outdoors() {
                 <img className="travel-img" alt="" src={require(`../img/${item.image}`)}></img>
                 <div className="travel-caption">
                     <ArrowDropUpIcon style={{ fontSize: 40 }}/>
-                    <text>{item.caption}</text>
+                    <text style={{ fontWeight: 'bold' }}>{item.label} </text>
+                    <text>in {item.location}</text>
                 </div>
             </div>
         );
