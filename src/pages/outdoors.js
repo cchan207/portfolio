@@ -11,23 +11,31 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 
 import '../css-files/app.css';
+import { versionMajorMinor } from 'typescript';
 
 export default function Outdoors() {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
 
-    let names = [
-        'Iceland/BlueLagoon.JPG',
-        'California/Boats.JPG',
-        'California/DeathValley.JPG',
-        'Arizona/RedRock.JPG',
-        'Iceland/Bridge.jpg',
-        'California/PalmSprings2.JPG',
-        'California/MontereyHotTub.JPG'
-    ].map( (name, index) => { 
-        return <img className="travel-img" alt="" src={require(`../img/${name}`)} />
-    } );
+    var images = [
+        {image : 'Iceland/BlueLagoon.JPG', caption : 'Blue Lagoon, Iceland'},
+        {image : 'California/Boats.JPG', caption : 'San Diego, California'},
+        {image : 'California/DeathValley.JPG', caption : 'Death Valley, California'},
+        {image : 'Arizona/RedRock.JPG', caption : 'Sedona, Arizona'},
+        {image : 'Iceland/Bridge.jpg', caption : 'Hraunfossar, Iceland'},
+        {image : 'California/PalmSprings2.JPG', caption : 'Palm Springs, California'},
+        {image : 'California/MontereyHotTub.JPG', caption : 'Monterey, California'}
+    ];
+
+    function getPicture(item) {
+        return (
+            <div>
+                <img className="travel-img" alt="" src={require(`../img/${item.image}`)}></img>
+                <text>{item.caption}</text>
+            </div>
+        );
+    }
 
     return (
         <div>
@@ -39,7 +47,7 @@ export default function Outdoors() {
                         <Row>
                             <div>
                             <Col sm={12} lg={12}>
-                                { names }
+                                { images.map(getPicture) }
                             </Col>
                             </div>
                         </Row>
