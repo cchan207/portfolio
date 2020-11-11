@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
 
 // import files
-import ResumePDF from '../files/Cora_Resume-2Aug2020.pdf';
+import ResumePDF from '../files/Cora_Resume-3Oct2020.pdf';
 
 import '../css-files/app.css';
 
