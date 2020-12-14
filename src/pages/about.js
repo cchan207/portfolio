@@ -42,19 +42,18 @@ export default function About() {
                             <p>
                                 Hi, welcome to my website! I created this site to experiment with front-end development using ReactJS and share some of my favorite pictures from 
                                 the trips I've been on. As of now, most of these pictures were taken on recent trips to Iceland; New York City, New York; Austin, Texas; 
-                                Sodona, Arizona; Chicago, Illinois; and different cities in my homestate of California. I've also been to Costa Rica, Japan, Newfoundland, China, and 
+                                Sedona, Arizona; Chicago, Illinois; and different cities in my homestate of California. I've also been to Costa Rica, Japan, Newfoundland, China, and 
                                 20 states in the US. It's my goal to visit all 50 someday! Check out the contact section below to view my photo archive for more pictures 
                                 (coming soon) or feel free to connect with me on any of the social media listed.
                             </p>
 
                             <h2>EXPERIENCE</h2>
                             <p>
-                                I am an incoming senior at Purdue University where I'm studying Computer Science with a Software Engineering concentration and 
-                                Business Economics minor. I have two years of technical work experience designing and implementing projects, executing deployments, 
+                                I'm a senior at Purdue University where I'm studying Computer Science with a Software Engineering concentration and 
+                                Business Economics minor. I'm also an incoming Software Development 
+                                Engineer with Amazon Web Services. I have two years of technical work experience designing and implementing projects, executing deployments, 
                                 and developing my communication and presentation skills. I strongly believe that balance is key to a successful career - a tenet that 
-                                I live out by leaving my desk! I enjoy traveling, hiking, and eating at different restaurants. I'm currently interning with Amazon Web 
-                                Services as a Software Development Engineer and am looking for full time positions starting late Summer 2021 
-                                with an emphasis on collaboration and leadership. You can view my resume{' '}
+                                I live out by leaving my desk! I enjoy traveling, hiking, and trying out different restaurants. You can view my resume{' '}
                                 <Link to="/resume">here</Link>.
                             </p>
                         </div>

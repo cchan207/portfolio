@@ -47,8 +47,8 @@ export default function Outdoors() {
             <Navbar />
             <h1 className="page-title">OUTDOORS</h1>
             <div>
-                <Container>
-                    <div className="travel-container">
+                <Container className="travel-container">
+                    <div>
                         <Row>
                             <div>
                             <Col sm={12} lg={12}>
@@ -56,15 +56,15 @@ export default function Outdoors() {
                             </Col>
                             </div>
                         </Row>
-                        <Row className="arrows">
+                    </div>
+                    <Row className="arrows">
                             <div className="left-nav-icon">
                                 <Link to="/"><NavigateBeforeIcon style={{ fontSize: 50 }} className="nav-icon"/>HOME</Link>
                             </div>
                             <div>
                                 <Link to="/city">CITY<NavigateNextIcon style={{ fontSize: 50 }} className="nav-icon"/></Link>
                             </div>
-                        </Row>
-                    </div>
+                    </Row>
                 </Container>
             </div>
             <Footer />

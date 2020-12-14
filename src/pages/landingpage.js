@@ -10,8 +10,8 @@ import '../css-files/app.css';
 
 // import pictures
 import Alamo from '../img/Texas/Alamo.JPG';
+import Profile from '../img/Homepage/Profile.JPG';
 import Chicago from '../img/Illinois/Streets.JPG';
-import Logo from '../img/Homepage/Logo.png';
 
 export default function Home() {
     useEffect(() => {
@@ -39,7 +39,7 @@ export default function Home() {
                             <Col sm={12} lg>
                                 <div>
                                 <Link to="/travel">
-                                    <img className="img" src={Alamo} alt="Travel" />
+                                    <img className="img" src={Profile} alt="Travel" />
                                     <h2 className="imgText"><Link to="/travel">TRAVEL</Link></h2>
                                 </Link>
                                 </div>
